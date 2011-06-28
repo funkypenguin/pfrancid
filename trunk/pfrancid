@@ -1,6 +1,6 @@
 #! /usr/bin/perl
 ##
-## $Id: jrancid.in 2160 2010-03-15 20:33:15Z root $
+## $Id: pfrancid.in 2160 2011-06-28 12:21:15Z buraglio $
 ##
 ## rancid 2.3.4
 ## Copyright (c) 1997-2008 by Terrapin Communications, Inc.
@@ -40,12 +40,13 @@
 ## ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 ## POSSIBILITY OF SUCH DAMAGE.
 # 
-# Amazingly hacked version of Hank's rancid - this one tries to
-# deal with Junipers.
+# Amazingly hacked version of jrancid rancid - this one tries to
+# deal with pfSense firewalls and was modified from John Skopis m0n0rancid by 
+# Nick Buraglio.
 #
 #  RANCID - Really Awesome New Cisco confIg Differ
 #
-# usage: jrancid [-dV] [-l] [-f filename | hostname]
+# usage: pfrancid [-dV] [-l] [-f filename | hostname]
 #
 use Getopt::Std;
 getopts('dflV');
