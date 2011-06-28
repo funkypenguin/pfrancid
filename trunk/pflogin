@@ -1,6 +1,6 @@
 #! /usr/bin/expect --
 ##
-## $Id: jlogin.in 2186 2010-04-08 22:30:47Z heas $
+## $Id: pfrancid.in 2160 2011-06-28 12:21:15Z buraglio $
 ##
 ## rancid 2.3.4
 ## Copyright (c) 1997-2009 by Terrapin Communications, Inc.
@@ -42,7 +42,7 @@
 # 
 #  The expect login scripts were based on Erik Sherk's gwtn, by permission.
 #
-# jlogin - juniper login
+# pflogin - pfSense login
 #
 # Most options are intuitive for logging into a Cisco router.
 # The default username password is the same as the vty password.
@@ -71,6 +71,7 @@ set do_passwd 1
 set do_saveconfig 0
 # Sometimes routers take awhile to answer (the default is 10 sec)
 set timeoutdflt 120
+
 #set prompt "# "
 
 # Find the user in the ENV, or use the unix userid.
@@ -464,6 +465,7 @@ foreach router [lrange $argv $i end] {
 	set timeout $timeoutdflt
     }
 
+# This works in pfSense 1.x.x, needs better regex for new prompt in 2.0
     set prompt "# "
 
     # Figure out username
