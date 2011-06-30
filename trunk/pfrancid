@@ -197,8 +197,10 @@ sub DoNothing {print STDOUT;}
 
 # Main
 @commandtable = (
+	{'/sbin/dmesg | /usr/bin/grep CPU'		=> 'default_handler'},
+	{'/sbin/dmesg | /usr/bin/grep memory'		=> 'default_handler'},
 	{'uname -a'					=> 'default_handler'},
-	{'cat /cf/conf/config.xml'					=> 'default_handler'},
+	{'cat /cf/conf/config.xml'			=> 'default_handler'},
 );
 # Use an array to preserve the order of the commands and a hash for mapping
 # commands to the subroutine and track commands that have been completed.
