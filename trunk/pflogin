@@ -466,6 +466,7 @@ foreach router [lrange $argv $i end] {
     }
 
 # This works in pfSense 1.x.x, needs better regex for new prompt in 2.0
+    #set prompt "\:\s "
     set prompt "# "
 
     # Figure out username
