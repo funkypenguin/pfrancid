@@ -1,0 +1,1 @@
+Contrib scripts to allow for backup of pfSense configurations within RANCID
